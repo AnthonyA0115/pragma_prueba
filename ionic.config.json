@@ -1,0 +1,7 @@
+{
+  "name": "pragma_prueba",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
