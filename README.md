@@ -7,10 +7,10 @@ Implementa un sistema de **gestión de tareas con categorías**, persistencia lo
 
 ## 📎 Enlaces de entrega
 
-- 🔗 **Repositorio:** [https://github.com/AnthonyA0115/pragma_prueba](https://github.com/AnthonyA0115/pragma_prueba)
-- 📱 **APK (descarga):** [Enlace a GitHub Releases o Google Drive]
+- 🔗 **Repositorio:** https://github.com/AnthonyA0115/pragma_prueba
+- 📱 **APK (descarga):** https://drive.google.com/file/d/1QrYAtg-udGk6iWehAbSP_qA71EJ_2JW1/view?usp=sharing
 - 🍎 **IPA:** No generado por falta de entorno macOS. El proyecto está **listo para compilar en Xcode** desde `platforms/ios` con una cuenta de desarrollador Apple.
-- 🎬 **Video demostrativo:** [Enlace a video o carpeta `/docs` con capturas]
+- 🎬 **Video demostrativo:** https://drive.google.com/file/d/1puQHOrahY4jZsklgCZ4W_wEqwMgj1EpD/view?usp=sharing
 
 ---
 
