@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pragma Prueba</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleTheme()">
+        <ion-icon
+          slot="icon-only"
+          [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'">
+        </ion-icon>
+      </ion-button>
+      <ion-button (click)="openCategoryModal()">
+        <ion-icon slot="icon-only" name="pricetags-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openTaskModal()">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-segment [(ngModel)]="selectedCategoryId">
+    <ion-segment-button value="">
+      <ion-label>Todas</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button *ngFor="let c of categories" [value]="c.id">
+      <ion-label>{{ c.name }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="showAdvancedFilter" class="ion-padding">
+    <small>Filtro avanzado (activado via Remote Config)</small>
+  </div>
+
+  <ion-list>
+    <ion-item lines="none" *ngFor="let t of filteredTasks()">
+      <ion-checkbox slot="start" [checked]="t.completed" (ionChange)="toggleCompleted(t, $event)">
+      </ion-checkbox>
+      <ion-label>
+        <h3 [class.completed]="t.completed">{{ t.title }}</h3>
+        <p *ngIf="t.notes">{{ t.notes }}</p>
+        <small *ngIf="t.categoryId">
+          {{ getCategoryName(t.categoryId) }}
+        </small>
+      </ion-label>
+      <ion-button fill="clear" (click)="openTaskModal(t)">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" fill="clear" (click)="removeTask(t.id)">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<style>
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+</style>

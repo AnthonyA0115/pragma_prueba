@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ editableTask.id ? 'Editar tarea' : 'Nueva tarea' }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding form-container">
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-item class="input-field" lines="none">
+        <ion-label position="stacked">Título</ion-label>
+        <ion-input placeholder="Ej: Llamar al cliente" [(ngModel)]="editableTask.title"></ion-input>
+      </ion-item>
+
+      <ion-item class="input-field" lines="none">
+        <ion-label position="stacked">Notas</ion-label>
+        <ion-textarea
+          placeholder="Agrega detalles adicionales..."
+          auto-grow="true"
+          [(ngModel)]="editableTask.notes">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item class="input-field" lines="none">
+        <ion-label position="stacked">Categoría</ion-label>
+        <ion-select interface="popover" [(ngModel)]="editableTask.categoryId" placeholder="Selecciona una categoría">
+          <ion-select-option *ngFor="let c of categories" [value]="c.id">
+            {{ c.name }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="block" class="save-button ion-margin-top" (click)="save()">
+        Guardar
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
