@@ -1,2 +1,36 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root[color-theme='light'] {
+  --ion-background-color: #f4f6f8;
+  --ion-text-color: #2c3e50;
+  --ion-item-background: #ffffff;
+  --ion-card-background: #ffffff;
+  --ion-toolbar-background: #2c3e50;
+  --ion-toolbar-color: #ffffff;
+  --ion-color-primary: #007bff;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-border-color: #e0e0e0;
+  --ion-shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* 🌙 Tema oscuro */
+:root[color-theme='dark'] {
+  --ion-background-color: #1e1e1e;
+  --ion-text-color: #f1f1f1;
+  --ion-item-background: #2a2a2a;
+  --ion-card-background: #2a2a2a;
+  --ion-toolbar-background: #121212;
+  --ion-toolbar-color: #f1f1f1;
+  --ion-color-primary: #4da3ff;
+  --ion-color-primary-contrast: #000000;
+  --ion-border-color: #444;
+  --ion-shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Transición suave entre temas */
+ion-app,
+ion-content,
+ion-toolbar,
+ion-item,
+ion-card,
+ion-list {
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}

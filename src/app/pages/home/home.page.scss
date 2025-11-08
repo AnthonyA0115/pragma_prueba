@@ -1,0 +1,93 @@
+// 🎨 Estilos generales con soporte de tema
+ion-toolbar {
+  --background: var(--ion-toolbar-background);
+  --color: var(--ion-toolbar-color);
+
+  ion-title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+ion-content {
+  background: var(--ion-background-color);
+
+  ion-segment {
+    margin-bottom: 10px;
+    background: var(--ion-card-background);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px var(--ion-shadow-color);
+
+    ion-segment-button {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ion-text-color);
+      --indicator-color: var(--ion-color-primary);
+
+      &.segment-button-checked {
+        color: var(--ion-color-primary);
+      }
+    }
+  }
+
+  .advanced-filter {
+    background: color-mix(in srgb, var(--ion-color-primary) 10%, var(--ion-background-color));
+    color: var(--ion-color-primary);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  ion-list {
+    background: transparent;
+
+    ion-item {
+      margin: 6px 0;
+      border-radius: 12px;
+      --background: var(--ion-item-background);
+      box-shadow: 0 2px 8px var(--ion-shadow-color);
+      transition: transform 0.1s ease-in-out;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      ion-checkbox {
+        --size: 22px;
+        margin-right: 10px;
+      }
+
+      ion-label {
+        h3 {
+          font-weight: 600;
+          margin-bottom: 2px;
+          color: var(--ion-text-color);
+        }
+
+        p {
+          font-size: 0.85rem;
+          color: color-mix(in srgb, var(--ion-text-color) 80%, #888 20%);
+        }
+
+        small {
+          color: var(--ion-color-primary);
+          font-weight: 500;
+        }
+
+        .completed {
+          text-decoration: line-through;
+          opacity: 0.6;
+          color: color-mix(in srgb, var(--ion-text-color) 50%, #999 50%);
+        }
+      }
+
+      ion-button {
+        margin-left: 4px;
+        --padding-start: 6px;
+        --padding-end: 6px;
+      }
+    }
+  }
+}

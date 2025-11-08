@@ -35,3 +35,54 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* =======================================================
+   🌙 Tema oscuro global (se aplica al cambiar color-theme)
+   ======================================================= */
+:root[color-theme='dark'] {
+  body,
+  ion-content {
+    --ion-background-color: #1e1e1e !important;
+    --ion-text-color: #f1f1f1;
+  }
+
+  ion-toolbar {
+    --background: #121212 !important;
+    --color: #f1f1f1 !important;
+  }
+
+  ion-item {
+    --background: #2a2a2a !important;
+    color: #f1f1f1 !important;
+  }
+
+  ion-segment {
+    background: #2a2a2a !important;
+  }
+
+  ion-segment-button {
+    color: #aaa !important;
+  }
+
+  ion-segment-button.segment-button-checked {
+    color: #4da3ff !important;
+  }
+
+  ion-list {
+    background: transparent !important;
+  }
+
+  ion-card {
+    background: #2a2a2a !important;
+    --color: #f1f1f1 !important;
+  }
+
+  ion-input,
+  ion-textarea,
+  ion-select {
+    --color: #f1f1f1 !important;
+  }
+
+  
+}
+
